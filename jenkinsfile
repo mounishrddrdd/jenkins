@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                ls -lrt
-                pwd
+                echo 'Building'
 sh '''
 echo 'shell started'
 pwd
