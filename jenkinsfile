@@ -3,27 +3,25 @@ pipeline {
     stages {
         stage ('compile stage') {
             steps {
-                    sh
-                    '''
-                       top > text.txt 
+                    sh '''
+                       top > text.txt
 '''
             }
         }
         stage ('testing') {
             steps {
-                   sh
-                   '''
+                   sh '''
                       echo "Mounish Chintham"
                    '''
 
             }
         }
         stage ('deployment stage') {
-            stage {
-                   '''
+            steps {
+                sh '''
                      echo "PIPELINE SUCCESS"
 '''
             }
         }
-    }   
+    }
 }
