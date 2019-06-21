@@ -1,26 +1,20 @@
 pipeline {
     agent any
-    stages {
-        stage ('compile stage') {
-            steps {
-                    sh '''
-                       top > text.txt
-'''
-            }
-        }
-        stage ('testing') {
-            steps {
-                   sh '''
-                      echo "Mounish Chintham"
-                   '''
 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
             }
         }
-        stage ('deployment stage') {
+        stage('Test') {
             steps {
-                sh '''
-                     echo "PIPELINE SUCCESS"
-'''
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
