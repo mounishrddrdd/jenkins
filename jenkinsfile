@@ -4,6 +4,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                ls -lrt
+                pwd
+sh '''
+echo 'shell started'
+pwd
+ls -lrt
+'''
             }
         }
         stage('Test') {
